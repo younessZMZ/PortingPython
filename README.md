@@ -79,12 +79,22 @@ Here are the steps given by ChatGPT:
 
 # Project Migration:
 
-1. Migrate internal packages to support both Python 3.6 and 3.9.
-2. Migrate parent classes to the leaves by following these steps:
+1. Migrate internal packages to support both Python 3.6 and 3.9. (2 weeks).
+2. Migrate parent classes to the leaves by following these steps: (4 months).
    1. Run the class on both versions to ensure that every line of code works as expected.
    2. Make the necessary changes to ensure that the code behaves as expected under both versions.
    3. Test multiple cases.
-3. Put the code into production. 
-4. Create a new environment for production with Python 3.9. 
-5. Run batches of scripts in production using the new environment.
+3. Put the code into production.
+4. Create a new environment for production with Python 3.9. (1 week)
+5. Run batches of scripts in production using the new environment and migrate them. (1 month)
+6. Drop the support for python 3.6.
+7. Refactor the code.
 
+# Refactor the code:
+
+1. Measure the quality of the code using SonarQube, and generate a report on the quality of the code base.
+2. Clean the code and format it with black from the parent classes to the leaves.
+3. Add black to CI with other linters.
+4. Apply SonarQube suggestions.
+5. Measure the quality of the code.
+6. Apply SonarQube to CI.
